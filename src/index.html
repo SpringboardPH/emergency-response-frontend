@@ -24,20 +24,22 @@
       }
     </style>
   </head>
-  <body class="bg-stone-50 w-screen h-screen">
-    <p
-      class="header flex justify-center items-center tracking-wider text-5xl text-white bg-red-500 font-semibold h-[14%]"
+  <body class="bg-stone-50 xl:w-screen h-[1000px] xl:h-screen">
+    <h2
+      class="header flex justify-center items-center tracking-wider px-6 sm:px-0 text-lg xl:text-5xl text-white bg-red-500 font-semibold h-[70px] xl:h-[14%]"
     >
       Quirino Emergency Response
-    </p>
-    <div class="flex w-full h-[86%] px-8 py-8 gap-x-10">
+    </h2>
+    <div class="flex flex-col xl:flex-row w-full xl:h-[86%] xl:px-8 xl:py-8 gap-x-10">
       <section
-        class="flex flex-col justify-center items-center text-center w-4/6 h-full bg-cyan-100 rounded-xl relative"
+        class="flex flex-col justify-center items-center text-center w-full xl:w-4/6 h-[700px] xl:h-full bg-cyan-100 xl:rounded-xl relative"
       >
-        <span class="text-center text-3xl mb-4 absolute top-24 w-[450px] font-medium text-green-500"
+        <span class="text-center xl:text-3xl mb-4 absolute top-16 w-[300px] xl:w-[550px] font-medium text-green-500"
           >To reach our emergency service, please click the call button</span
         >
-        <div class="space-y-4 hover:cursor-pointer hover:text-emerald-700 text-green-500 group">
+        <div
+          class="space-y-4 hover:cursor-pointer hover:text-emerald-700 text-green-500 group flex flex-col justify-center items-center"
+        >
           <button
             button
             class="bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-5 px-5 rounded-full flex gap-2"
@@ -53,14 +55,20 @@
           <p class="text-center text-3xl mb-4 font-semibold tracking-wider group-hover:text-green-500 uppercase">
             call
           </p>
+          <div class="absolute bottom-12 w-full flex justify-center items-center gap-8">
+            <img src="../assets/springboard_x_comclark1.png" alt="springboardXcomclark" class="h-14 xl:h-20" />
+            <img src="../assets/springboard_x_comclark2.png" alt="springboardXcomclark" class="h-14 xl:h-20" />
+          </div>
         </div>
       </section>
-      <section class="w-2/6 space-y-9">
-        <video class="rounded-xl h-[340px]" autoplay loop muted>
+      <section
+        class="w-full xl:w-2/6 xl:space-y-9 py-4 xl:p-0 flex flex-col md:flex-row xl:flex-col gap-y-4 xl:gap-0 justify-start items-center text-center gap-x-4 bg-black lg:bg-slate-50 xl:bg-transparent max-h-[500px]"
+      >
+        <video class="xl:rounded-xl h-auto md:h-[200px] xl:h-[340px] max-w-full max-h-[500px]" autoplay loop muted>
           <source src="../assets/explore-quirino.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <video class="rounded-xl h-[340px]" autoplay loop muted>
+        <video class="xl:rounded-xl h-auto md:h-[200px] xl:h-[340px] max-w-full max-h-[500px]" autoplay loop muted>
           <source src="../assets/explore-quirino-2.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
