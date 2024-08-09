@@ -34,10 +34,12 @@
       <section
         class="flex flex-col justify-center items-center text-center w-full xl:w-4/6 h-[700px] xl:h-full bg-cyan-100 xl:rounded-xl relative"
       >
-        <span class="text-center xl:text-3xl mb-4 absolute top-24 w-[300px] xl:w-[450px] font-medium text-green-500"
+        <span class="text-center xl:text-3xl mb-4 absolute top-16 w-[300px] xl:w-[550px] font-medium text-green-500"
           >To reach our emergency service, please click the call button</span
         >
-        <div class="space-y-4 hover:cursor-pointer hover:text-emerald-700 text-green-500 group">
+        <div
+          class="space-y-4 hover:cursor-pointer hover:text-emerald-700 text-green-500 group flex flex-col justify-center items-center"
+        >
           <button
             button
             class="bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-5 px-5 rounded-full flex gap-2"
@@ -53,14 +55,20 @@
           <p class="text-center text-3xl mb-4 font-semibold tracking-wider group-hover:text-green-500 uppercase">
             call
           </p>
+          <div class="absolute bottom-12 w-full flex justify-center items-center gap-8">
+            <img src="../assets/springboard_x_comclark1.png" alt="springboardXcomclark" class="h-14 xl:h-20" />
+            <img src="../assets/springboard_x_comclark2.png" alt="springboardXcomclark" class="h-14 xl:h-20" />
+          </div>
         </div>
       </section>
-      <section class="w-2/6 space-y-9">
-        <video class="rounded-xl h-[340px]" autoplay loop muted>
+      <section
+        class="w-full xl:w-2/6 xl:space-y-9 py-4 xl:p-0 flex flex-col md:flex-row xl:flex-col gap-y-4 xl:gap-0 justify-start items-center text-center gap-x-4 bg-black lg:bg-slate-50 xl:bg-transparent max-h-[500px]"
+      >
+        <video class="xl:rounded-xl h-auto md:h-[200px] xl:h-[340px] max-w-full max-h-[500px]" autoplay loop muted>
           <source src="../assets/explore-quirino.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <video class="rounded-xl h-[340px]" autoplay loop muted>
+        <video class="xl:rounded-xl h-auto md:h-[200px] xl:h-[340px] max-w-full max-h-[500px]" autoplay loop muted>
           <source src="../assets/explore-quirino-2.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
