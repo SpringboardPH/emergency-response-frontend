@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Emergency Response - Agent Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHh-8-Kx4b_3362KzAD4ravw602Kh4GF0&loading=async&libraries=maps&v=beta"
+      defer
+    ></script>
+    <script>
+      function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 14.57123, lng: 120.990829 },
+          zoom: 15,
+        })
+
+        const marker = new google.maps.Marker({
+          position: { lat: 14.57123, lng: 120.990829 }, //14.571230, 120.990829
+          map: map,
+          title: "Hello World!",
+        })
+      }
+
+      window.onload = initMap
+    </script>
+  </head>
+  <body class="w-screen h-screen grid grid-cols-2 gap-8 px-8 py-8">
+    <section id="list" class="w-full bg-cyan-100 rounded-xl overflow-hidden">
+      <div class="w-full text-xl flex justify-between font-medium tracking-wide py-6 bg-blue-500 text-white px-5">
+        <span> User ID: 123bsfmsjbj</span> <span>Location: Palacian Bararangay Hall, Quirino</span>
+      </div>
+      <section
+        class="flex flex-col justify-center items-center text-center w-full h-full bg-cyan-100 rounded-xl relative"
+      >
+        <span class="text-center text-3xl mb-4 absolute top-36 w-[350px] text-blue-500">Connecting . . .</span>
+        <div class="flex flex-col justify-center items-center text-center gap-y-6 hover:cursor-pointer">
+          <img src="../assets/user.png" alt="user" class="w-40 h-40" />
+          <button
+            class="text-center text-2xl mb-4 font-semibold tracking-wider bg-red-500 text-white py-1 px-1 w-40 rounded-full"
+          >
+            END CALL
+          </button>
+        </div>
+      </section>
+    </section>
+    <div id="map" class="w-full bg-yellow-300 rounded-xl">
+      <gmp-map center="14.571230, 120.990829" zoom="15" map-id="MAP_ID"></gmp-map>
+    </div>
+  </body>
+</html>
