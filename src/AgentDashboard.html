@@ -1,138 +1,99 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Emergency Response - Agent Dashboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
-    <link href="./output.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHh-8-Kx4b_3362KzAD4ravw602Kh4GF0&loading=async&libraries=maps&v=beta"
-      defer
-    ></script>
-    <script>
-      function initMap() {
-        const map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: 14.57123, lng: 120.990829 },
-          zoom: 15,
-        })
+    <head>
+        <meta charset="UTF-8" />
+        <title>Emergency Response - Agent Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./output.css" rel="stylesheet" />
+        <link href="./output.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHh-8-Kx4b_3362KzAD4ravw602Kh4GF0&loading=async&libraries=maps&v=beta" defer></script>
 
-        const marker = new google.maps.Marker({
-          position: { lat: 14.57123, lng: 120.990829 }, //14.571230, 120.990829
-          map: map,
-          title: "Hello World!",
-        })
-      }
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
 
-      window.onload = initMap
-    </script>
+        <script defer src="./js/main.js"></script>
+        <script defer src="./js/agent.js"></script>
 
-    <style>
-      body{
-        font-family: 'Poppins', sans-serif;
-      }
-    </style>
-  </head>
+        <script>
+            function initMap() {
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    center: { lat: 14.57123, lng: 120.990829 },
+                    zoom: 15,
+                });
 
-  <body class="bg-stone-50 w-full h-screen">
-    <p class="header flex justify-center items-center text-center tracking-wider text-2xl lg:text-5xl text-white bg-red-500 font-semibold h-[14%]"> Quirino Emergency Response</p>
-    <div class="w-full lg:h-screen h-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-8 py-8">
-      <section id="list" class="w-full bg-cyan-100 rounded-xl overflow-hidden">
-        <h1 class="w-full text-2xl flex justify-center text-center font-medium tracking-wide py-4 bg-blue-500 text-white px-5">
-          List of Pending Emergency Calls
-        </h1>
-        <ul class="space-y-1 px-4 py-2">
-          <li class="flex flex-col lg:flex-row justify-between place-items-center bg-white border-2 border-blue-100 px-8 py-2 rounded-lg">
-            <div class="">
-              <p>User ID: 123asdbjasbflda</p>
-              <p>Location: Palacian Bararangay Hall, Quirino</p>
-            </div>
-            <div class="space-y-4">
-              <button class="bg-emerald-500 text-white py-1 px-4 w-28 rounded-md">Accept</button>
-              <button class="bg-red-500 text-white py-1 px-4 w-28 rounded-md">Reject</button>
-            </div>
-          </li>
-          <li class="flex flex-col lg:flex-row justify-between place-items-center bg-white border-2 border-blue-100 px-8 py-2 rounded-lg">
-            <div class="">
-              <p>User ID: 123asdbjasbflda</p>
-              <p>Location: Palacian Bararangay Hall, Quirino</p>
-            </div>
-            <div class="space-y-4">
-              <button class="bg-emerald-500 text-white py-1 px-4 w-28 rounded-md">Accept</button>
-              <button class="bg-red-500 text-white py-1 px-4 w-28 rounded-md">Reject</button>
-            </div>
-          </li>
-          <li class="flex flex-col lg:flex-row justify-between place-items-center bg-white border-2 border-blue-100 px-8 py-2 rounded-lg">
-            <div class="">
-              <p>User ID: 123asdbjasbflda</p>
-              <p>Location: Palacian Bararangay Hall, Quirino</p>
-            </div>
-            <div class="space-y-4">
-              <button class="bg-emerald-500 text-white py-1 px-4 w-28 rounded-md">Accept</button>
-              <button class="bg-red-500 text-white py-1 px-4 w-28 rounded-md">Reject</button>
-            </div>
-          </li>
-          <li class="flex flex-col lg:flex-row justify-between place-items-center bg-white border-2 border-blue-100 px-8 py-2 rounded-lg">
-            <div class="">
-              <p>User ID: 123asdbjasbflda</p>
-              <p>Location: Palacian Bararangay Hall, Quirino</p>
-            </div>
-            <div class="space-y-4">
-              <button class="bg-emerald-500 text-white py-1 px-4 w-28 rounded-md">Accept</button>
-              <button class="bg-red-500 text-white py-1 px-4 w-28 rounded-md">Reject</button>
-            </div>
-          </li>
-        </ul>
-      </section>
-        <div id="map" class="w-auto h-screen bg-yellow-300 rounded-xl">
-          <gmp-map center="14.571230, 120.990829" zoom="15" map-id="MAP_ID"></gmp-map>
-        </div>  
-    </div>
-  </body>
+                const marker = new google.maps.Marker({
+                    position: { lat: 14.57123, lng: 120.990829 }, //14.571230, 120.990829
+                    map: map,
+                    title: "Hello World!",
+                });
+            }
 
-  <!-- <body class="w-screen h-screen grid grid-cols-1 lg:grid-cols-2 gap-8 px-8 py-8">
-    
-    <section id="list" class="w-full bg-cyan-100 rounded-xl overflow-hidden">
-      <h1 class="w-full text-2xl flex justify-center font-medium tracking-wide py-4 bg-blue-500 text-white px-5">
-        List of Pending Emergency Calls
-      </h1>
-      <ul class="space-y-1 px-4 py-2">
-        <li class="flex justify-between place-items-center bg-white border-2 border-blue-100 px-8 py-2 rounded-lg">
-          <div class="">
-            <p>User ID: 123asdbjasbflda</p>
-            <p>Location: Palacian Bararangay Hall, Quirino</p>
-          </div>
-          <div class="space-y-4">
-            <button class="bg-emerald-500 text-white py-1 px-4 w-28 rounded-md">Accept</button>
-            <button class="bg-red-500 text-white py-1 px-4 w-28 rounded-md">Reject</button>
-          </div>
-        </li>
-        <li class="flex flex-col lg:flex-row justify-between place-items-center bg-white border-2 border-blue-100 px-8 py-2 rounded-lg">
-          <div class="">
-            <p>User ID: 123asdbjasbflda</p>
-            <p>Location: Palacian Bararangay Hall, Quirino</p>
-          </div>
-          <div class="space-y-4">
-            <button class="bg-emerald-500 text-white py-1 px-4 w-28 rounded-md">Accept</button>
-            <button class="bg-red-500 text-white py-1 px-4 w-28 rounded-md">Reject</button>
-          </div>
-        </li>
-        <li class="flex justify-between place-items-center bg-white border-2 border-blue-100 px-8 py-2 rounded-lg">
-          <div class="">
-            <p>User ID: 123asdbjasbflda</p>
-            <p>Location: Palacian Bararangay Hall, Quirino</p>
-          </div>
-          <div class="space-y-4">
-            <button class="bg-emerald-500 text-white py-1 px-4 w-28 rounded-md">Accept</button>
-            <button class="bg-red-500 text-white py-1 px-4 w-28 rounded-md">Reject</button>
-          </div>
-        </li>
-      </ul>
-    </section>
-    <div id="map" class="w-full bg-yellow-300 rounded-xl">
-      <gmp-map center="14.571230, 120.990829" zoom="15" map-id="MAP_ID"></gmp-map>
-    </div>
-  </body> -->
+            window.onload = initMap;
+        </script>
+
+        <style>
+            body {
+                font-family: "Poppins", sans-serif;
+            }
+        </style>
+    </head>
+
+    <body class="bg-stone-50 w-full h-screen">
+        <p class="header flex justify-center items-center text-center tracking-wider text-2xl lg:text-5xl text-white bg-red-500 font-semibold h-[14%]">Quirino Emergency Response</p>
+        <div class="w-full lg:h-screen h-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-8 py-8">
+            <section id="list" class="w-full bg-cyan-100 rounded-xl overflow-hidden">
+                <h1 class="w-full text-2xl flex justify-center text-center font-medium tracking-wide py-4 bg-blue-500 text-white px-5">List of Pending Emergency Calls</h1>
+                <ul class="space-y-1 px-4 py-2" id="callerContainer">
+                    <li class="flex-col lg:flex-row justify-between place-items-center hidden bg-white border-2 border-blue-100 px-8 py-2 rounded-lg">
+                        <div class="">
+                            <p>User ID: 123asdbjasbflda</p>
+                            <p>Location: Palacian Bararangay Hall, Quirino</p>
+                        </div>
+                        <div class="space-y-4">
+                            <button class="bg-emerald-500 text-white py-1 px-4 w-28 rounded-md">Accept</button>
+                            <button class="bg-red-500 text-white py-1 px-4 w-28 rounded-md">Reject</button>
+                        </div>
+                    </li>
+                    <li class="flex-col lg:flex-row justify-between place-items-center hidden bg-white border-2 border-blue-100 px-8 py-2 rounded-lg">
+                        <div class="">
+                            <p>User ID: 123asdbjasbflda</p>
+                            <p>Location: Palacian Bararangay Hall, Quirino</p>
+                        </div>
+                        <div class="space-y-4">
+                            <button class="bg-emerald-500 text-white py-1 px-4 w-28 rounded-md">Accept</button>
+                            <button class="bg-red-500 text-white py-1 px-4 w-28 rounded-md">Reject</button>
+                        </div>
+                    </li>
+                    <li class="flex-col lg:flex-row justify-between place-items-center hidden bg-white border-2 border-blue-100 px-8 py-2 rounded-lg">
+                        <div class="">
+                            <p>User ID: 123asdbjasbflda</p>
+                            <p>Location: Palacian Bararangay Hall, Quirino</p>
+                        </div>
+                        <div class="space-y-4">
+                            <button class="bg-emerald-500 text-white py-1 px-4 w-28 rounded-md">Accept</button>
+                            <button class="bg-red-500 text-white py-1 px-4 w-28 rounded-md">Reject</button>
+                        </div>
+                    </li>
+                    <li class="flex-col lg:flex-row justify-between place-items-center hidden bg-white border-2 border-blue-100 px-8 py-2 rounded-lg">
+                        <div class="">
+                            <p>User ID: 123asdbjasbflda</p>
+                            <p>Location: Palacian Bararangay Hall, Quirino</p>
+                        </div>
+                        <div class="space-y-4">
+                            <button class="bg-emerald-500 text-white py-1 px-4 w-28 rounded-md">Accept</button>
+                            <button class="bg-red-500 text-white py-1 px-4 w-28 rounded-md">Reject</button>
+                        </div>
+                    </li>
+                </ul>
+
+                <audio id="localAudio" controls hidden></audio>
+                <audio id="remoteAudio" controls hidden></audio>
+            </section>
+            <div id="map" class="w-auto h-screen bg-yellow-300 rounded-xl">
+                <gmp-map center="14.571230, 120.990829" zoom="15" map-id="MAP_ID"></gmp-map>
+            </div>
+        </div>
+    </body>
 </html>

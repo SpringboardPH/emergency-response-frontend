@@ -9,8 +9,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
 
-        <script src="./js/caller.js"></script>
+        <script defer src="./js/main.js"></script>
+        <script defer src="./js/caller.js"></script>
 
         <style>
             body {
@@ -60,7 +62,8 @@
                     <audio id="audioTwo" src="./assets/audio/audio2.m4a" class="hidden"></audio>
                     <audio id="audioThree" src="./assets/audio/audio3.mp3" class="hidden" loop></audio>
 
-                    <audio id="userMicrophone" hidden></audio>
+                    <audio id="localAudio" controls hidden></audio>
+                    <audio id="remoteAudio" controls hidden></audio>
                 </div>
             </section>
 
