@@ -57,21 +57,32 @@
           </p>
           <div class="absolute bottom-12 w-full flex justify-center items-center gap-8">
             <img src="../assets/springboard_x_comclark1.png" alt="springboardXcomclark" class="h-14 xl:h-20" />
-            <img src="../assets/springboard_x_comclark2.png" alt="springboardXcomclark" class="h-14 xl:h-20" />
+            <img
+              src="../assets/springboard_x_comclark2.png"
+              alt="springboardXcomclark"
+              class="h-14 xl:h-20 relative top-[9px] xl:top-3 scale-125"
+            />
           </div>
         </div>
       </section>
       <section
-        class="w-full xl:w-2/6 xl:space-y-9 py-4 xl:p-0 flex flex-col md:flex-row xl:flex-col gap-y-4 xl:gap-0 justify-start items-center text-center gap-x-4 bg-black lg:bg-slate-50 xl:bg-transparent max-h-[500px]"
+        class="w-full xl:w-2/6 xl:space-y-9 py-2 xl:p-0 flex flex-col md:flex-row xl:flex-col gap-y-2 xl:gap-0 justify-start items-center text-center gap-x-4 bg-black xl:bg-transparent max-h-[500px] relative"
       >
-        <video class="xl:rounded-xl h-auto md:h-[200px] xl:h-[340px] max-w-full max-h-[500px]" autoplay loop muted>
+        <video class="xl:rounded-xl h-auto md:h-[200px] xl:h-[340px] max-w-full max-h-[500px] z-10" autoplay loop muted>
           <source src="../assets/explore-quirino.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <video class="xl:rounded-xl h-auto md:h-[200px] xl:h-[340px] max-w-full max-h-[500px]" autoplay loop muted>
+
+        <video class="xl:rounded-xl h-auto md:h-[200px] xl:h-[340px] max-w-full max-h-[500px] z-10" autoplay loop muted>
           <source src="../assets/explore-quirino-2.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <div class="grow bg-red-500 h-32 w-full border border-black hidden xl:flex"></div>
+        <!-- <img
+          src="../assets/ads-background.jpg"
+          alt=""
+          class="xl:hidden bg-no-repeat bg-cover w-full h-full absolute z-0"
+        /> -->
       </section>
     </div>
   </body>
