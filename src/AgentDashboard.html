@@ -38,101 +38,28 @@
 
   <body class="bg-stone-50 w-full h-screen">
     <p class="header flex justify-center items-center text-center tracking-wider text-2xl lg:text-5xl text-white bg-red-500 font-semibold h-[14%]"> Quirino Emergency Response</p>
-    <div class="w-full lg:h-screen h-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-8 py-8">
-      <section id="list" class="w-full bg-cyan-100 rounded-xl overflow-hidden">
-        <h1 class="w-full text-2xl flex justify-center text-center font-medium tracking-wide py-4 bg-blue-500 text-white px-5">
+    <div class="w-full lg:h-screen h-auto grid grid-cols-1 lg:grid-cols-2 lg:gap-y-8 gap-x-8 lg:px-8 lg:py-8">
+      <section id="list" class="w-full bg-cyan-100 lg:rounded-xl overflow-hidden">
+        <h1 class="w-full lg:text-2xl text-lg text-balance  flex justify-center text-center font-medium tracking-wide py-4 bg-blue-500 text-white px-5">
           List of Pending Emergency Calls
         </h1>
-        <ul class="space-y-1 px-4 py-2">
-          <li class="flex flex-col lg:flex-row justify-between place-items-center bg-white border-2 border-blue-100 px-8 py-2 rounded-lg">
+        <ul class="space-y-1 px-2 lg:px-4 py-2" id="list">
+          <li class="flex flex-col sm:flex-row lg:flex-row justify-between place-items-center space-y-2 bg-white border-2 border-blue-100 px-8 py-2 rounded-lg">
             <div class="">
               <p>User ID: 123asdbjasbflda</p>
               <p>Location: Palacian Bararangay Hall, Quirino</p>
             </div>
-            <div class="space-y-4">
-              <button class="bg-emerald-500 text-white py-1 px-4 w-28 rounded-md">Accept</button>
-              <button class="bg-red-500 text-white py-1 px-4 w-28 rounded-md">Reject</button>
-            </div>
-          </li>
-          <li class="flex flex-col lg:flex-row justify-between place-items-center bg-white border-2 border-blue-100 px-8 py-2 rounded-lg">
-            <div class="">
-              <p>User ID: 123asdbjasbflda</p>
-              <p>Location: Palacian Bararangay Hall, Quirino</p>
-            </div>
-            <div class="space-y-4">
-              <button class="bg-emerald-500 text-white py-1 px-4 w-28 rounded-md">Accept</button>
-              <button class="bg-red-500 text-white py-1 px-4 w-28 rounded-md">Reject</button>
-            </div>
-          </li>
-          <li class="flex flex-col lg:flex-row justify-between place-items-center bg-white border-2 border-blue-100 px-8 py-2 rounded-lg">
-            <div class="">
-              <p>User ID: 123asdbjasbflda</p>
-              <p>Location: Palacian Bararangay Hall, Quirino</p>
-            </div>
-            <div class="space-y-4">
-              <button class="bg-emerald-500 text-white py-1 px-4 w-28 rounded-md">Accept</button>
-              <button class="bg-red-500 text-white py-1 px-4 w-28 rounded-md">Reject</button>
-            </div>
-          </li>
-          <li class="flex flex-col lg:flex-row justify-between place-items-center bg-white border-2 border-blue-100 px-8 py-2 rounded-lg">
-            <div class="">
-              <p>User ID: 123asdbjasbflda</p>
-              <p>Location: Palacian Bararangay Hall, Quirino</p>
-            </div>
-            <div class="space-y-4">
+            <div class="flex lg:flex-col gap-x-2 gap-y-2">
               <button class="bg-emerald-500 text-white py-1 px-4 w-28 rounded-md">Accept</button>
               <button class="bg-red-500 text-white py-1 px-4 w-28 rounded-md">Reject</button>
             </div>
           </li>
         </ul>
       </section>
-        <div id="map" class="w-auto h-screen bg-yellow-300 rounded-xl">
+        <div id="map" class="w-auto h-screen bg-yellow-300 lg:rounded-xl">
           <gmp-map center="14.571230, 120.990829" zoom="15" map-id="MAP_ID"></gmp-map>
         </div>  
     </div>
   </body>
 
-  <!-- <body class="w-screen h-screen grid grid-cols-1 lg:grid-cols-2 gap-8 px-8 py-8">
-    
-    <section id="list" class="w-full bg-cyan-100 rounded-xl overflow-hidden">
-      <h1 class="w-full text-2xl flex justify-center font-medium tracking-wide py-4 bg-blue-500 text-white px-5">
-        List of Pending Emergency Calls
-      </h1>
-      <ul class="space-y-1 px-4 py-2">
-        <li class="flex justify-between place-items-center bg-white border-2 border-blue-100 px-8 py-2 rounded-lg">
-          <div class="">
-            <p>User ID: 123asdbjasbflda</p>
-            <p>Location: Palacian Bararangay Hall, Quirino</p>
-          </div>
-          <div class="space-y-4">
-            <button class="bg-emerald-500 text-white py-1 px-4 w-28 rounded-md">Accept</button>
-            <button class="bg-red-500 text-white py-1 px-4 w-28 rounded-md">Reject</button>
-          </div>
-        </li>
-        <li class="flex flex-col lg:flex-row justify-between place-items-center bg-white border-2 border-blue-100 px-8 py-2 rounded-lg">
-          <div class="">
-            <p>User ID: 123asdbjasbflda</p>
-            <p>Location: Palacian Bararangay Hall, Quirino</p>
-          </div>
-          <div class="space-y-4">
-            <button class="bg-emerald-500 text-white py-1 px-4 w-28 rounded-md">Accept</button>
-            <button class="bg-red-500 text-white py-1 px-4 w-28 rounded-md">Reject</button>
-          </div>
-        </li>
-        <li class="flex justify-between place-items-center bg-white border-2 border-blue-100 px-8 py-2 rounded-lg">
-          <div class="">
-            <p>User ID: 123asdbjasbflda</p>
-            <p>Location: Palacian Bararangay Hall, Quirino</p>
-          </div>
-          <div class="space-y-4">
-            <button class="bg-emerald-500 text-white py-1 px-4 w-28 rounded-md">Accept</button>
-            <button class="bg-red-500 text-white py-1 px-4 w-28 rounded-md">Reject</button>
-          </div>
-        </li>
-      </ul>
-    </section>
-    <div id="map" class="w-full bg-yellow-300 rounded-xl">
-      <gmp-map center="14.571230, 120.990829" zoom="15" map-id="MAP_ID"></gmp-map>
-    </div>
-  </body> -->
 </html>
